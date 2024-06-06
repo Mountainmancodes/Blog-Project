@@ -12,4 +12,17 @@ switchToggle.addEventListener('change', function () {
     sunEmoji.style.display = 'inline-block';
     moonEmoji.style.display = 'none';
   }
+
+
+// Added to prevent when hitting sumbit on the form it does not trigger a switch from light mode to dark mode
+  const form = document.querySelector('form');
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+ 
+    if (switchToggle.checked) {
+      document.body.classList.add('dark-mode');
+    }
+  });
+
 });

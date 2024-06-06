@@ -8,17 +8,31 @@
   <link rel="stylesheet" href="./assets/css/blog.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="header-container">
-            <div class="circle"><h1>Mountainmancodes Blog</h1></div>
+  <div class="main-container">
+    <header class="header-container">
+      <div class="circle">
+        <h1>Mountainmancodes Blog</h1>
+      </div>
+    </header>
+    <div class="content-container">
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+        <label for="content">Content:</label><br>
+        <!-- Defines the size of text box for Content -->
+        <textarea id="content" name="content" rows="5" cols="33"></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
     </div>
-  <label class="switch" for="switch-toggle">
-    <input type="checkbox" id="switch-toggle">
-    <span class="slider"></span>
-    <span class="emoji sun" id="sun">☀️</span>
-    <span class="emoji moon" id="moon">🌙</span>
-  </label>
-  
+    <label class="switch" for="switch-toggle">
+      <input type="checkbox" id="switch-toggle">
+      <span class="slider"></span>
+      <span class="emoji sun" id="sun">☀️</span>
+      <span class="emoji moon" id="moon">🌙</span>
+    </label>
+  </div>
   <footer>
     <p>Made with ❤️ by <a href="https://github.com/Mountainmancodes" target="_blank">Mountainmancodes</a></p>
   </footer>
