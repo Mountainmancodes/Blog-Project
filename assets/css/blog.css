@@ -1,0 +1,148 @@
+
+/* Header adjustments */
+.header-container {
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.blog-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 20px;
+}
+
+/* Controls container positioning */
+.controls-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}
+
+/* Back button adjustments */
+#back-button {
+    padding: 3px 6px; /* Smaller padding for the back button */
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size for the back button */
+}
+
+#back-button:hover {
+    background-color: #1976D2;
+}
+
+/* Switch adjustments */
+.switch {
+    display: inline-block;
+    width: 50px; /* Increased width for the switch */
+    height: 26px; /* Increased height for the switch */
+    margin-right: 10px;
+    margin-left: 10px; /* Added margin for the switch */
+    position: relative; /* Added position */
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px; /* Adjust the border radius as needed */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; /* Adjusted height for the slider */
+    width: 20px; /* Adjusted width for the slider */
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px); /* Adjusted translation for checked state */
+}
+
+/* Dark mode adjustments */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Emoji adjustments */
+.emoji {
+    font-size: 16px; /* Adjust the font size as needed */
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.sun {
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+.moon {
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+}
+
+input:checked + .slider + .sun,
+.dark-mode input:checked + .slider + .moon {
+    display: inline-block;
+}
+/* Back button adjustments */
+#back-button {
+    padding: 3px 6px; /* Smaller padding for the back button */
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+    margin-right: 10px;
+}
+
+#back-button:hover {
+    background-color: #1976D2;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}

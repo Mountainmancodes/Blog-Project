@@ -5,11 +5,12 @@
     align-items: center; 
     height: 100vh; 
   }
-  
 
   .header-container {
     text-align: center; 
   }
+
+  
   
   /* Circle */
   .circle {
@@ -33,6 +34,17 @@
  
   .content-container {
     text-align: center; 
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    border: 2px solid #ccc; /* Add a border with a color of your choice */
+    padding: 20px; /* Add padding inside the border for spacing */
+    background-color: #ffcc00;
   }
 
 
@@ -118,6 +130,14 @@
     display: inline-block;
   }
 
+ form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
 
   /* Centers the footer */
   footer {
