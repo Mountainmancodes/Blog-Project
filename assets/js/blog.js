@@ -6,7 +6,6 @@ const form = document.getElementById('blog-form');
 const postContainer = document.getElementById('post-container');
 
 
-// Function to toggle between light and dark mode
 function toggleTheme() {
   if (switchToggle.checked) {
     document.body.classList.add('dark-mode');
@@ -19,7 +18,7 @@ function toggleTheme() {
   }
 }
 
-// Dark mode switch event listener
+
 switchToggle.addEventListener('change', toggleTheme);
 
 // Function to load blog posts
@@ -32,7 +31,7 @@ function loadBlogPosts() {
     postElement.classList.add('blog-post'); // Add class for styling
     postElement.innerHTML = `
       <h2>${post.title}</h2>
-      <p>By ${post.username}</p>
+      <p>Written by ${post.username}</p>
       <p>${post.content}</p>
     `;
     postContainer.appendChild(postElement);

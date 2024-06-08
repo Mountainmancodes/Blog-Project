@@ -1,5 +1,3 @@
-
-/* Header adjustments */
 .header-container {
     position: relative;
     height: 60px;
@@ -18,7 +16,7 @@
     left: 20px;
 }
 
-/* Controls container positioning */
+
 .controls-container {
     display: flex;
     align-items: center;
@@ -28,29 +26,29 @@
     right: 20px;
 }
 
-/* Back button adjustments */
+
 #back-button {
-    padding: 3px 6px; /* Smaller padding for the back button */
+    padding: 3px 6px; 
     background-color: #2196F3;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px; /* Smaller font size for the back button */
+    font-size: 14px;
 }
 
 #back-button:hover {
     background-color: #1976D2;
 }
 
-/* Switch adjustments */
+
 .switch {
     display: inline-block;
-    width: 50px; /* Increased width for the switch */
-    height: 26px; /* Increased height for the switch */
+    width: 50px; 
+    height: 26px; 
     margin-right: 10px;
-    margin-left: 10px; /* Added margin for the switch */
-    position: relative; /* Added position */
+    margin-left: 10px; 
+    position: relative;
 }
 
 .switch input {
@@ -68,14 +66,14 @@
     bottom: 0;
     background-color: #ccc;
     transition: 0.4s;
-    border-radius: 34px; /* Adjust the border radius as needed */
+    border-radius: 34px; 
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 20px; /* Adjusted height for the slider */
-    width: 20px; /* Adjusted width for the slider */
+    height: 20px; 
+    width: 20px; 
     left: 3px;
     bottom: 3px;
     background-color: white;
@@ -88,18 +86,18 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(24px); /* Adjusted translation for checked state */
+    transform: translateX(24px); 
 }
 
-/* Dark mode adjustments */
+
 .dark-mode {
     background-color: #222;
     color: #fff;
 }
 
-/* Emoji adjustments */
+
 .emoji {
-    font-size: 16px; /* Adjust the font size as needed */
+    font-size: 16px; 
     margin-left: 5px;
     display: inline-block;
 }
@@ -122,9 +120,9 @@ input:checked + .slider + .sun,
 .dark-mode input:checked + .slider + .moon {
     display: inline-block;
 }
-/* Back button adjustments */
+
 #back-button {
-    padding: 3px 6px; /* Smaller padding for the back button */
+    padding: 3px 6px; 
     background-color: #2196F3;
     color: white;
     border: none;
