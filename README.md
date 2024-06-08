@@ -1,4 +1,4 @@
-##Mountainmancodes Blog
+### Mountainmancodes Blog
 
 Welcome to the Mountainmancodes Blog project! This is a simple platform designed for users to create and share blog posts. It features a clean user interface with a dark mode option and uses local storage to save posts.
 
