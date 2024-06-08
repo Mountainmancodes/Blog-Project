@@ -7,13 +7,20 @@ form.addEventListener('submit', function(event) {
     const titleInput = document.querySelector("#title");
     const contentInput = document.querySelector("#content");
 
+   // Validate form inputs
+   if (!usernameInput.value || !titleInput.value || !contentInput.value) {
+    alert("Please complete all fields before submitting the form.");
+    return; // Prevent form submission if any fields are empty
+}
+
+
     const formData = {
         username: usernameInput.value,
         title: titleInput.value,
         content: contentInput.value,
     };
 
-    // Safely retrieve or initialize storedData as an array
+
   // Safely retrieve or initialize storedData as an array
 let storedData = [];
 if (localStorage.getItem("formData")) {
