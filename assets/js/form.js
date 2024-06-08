@@ -1,30 +1,38 @@
-// // Select form input elements
-// const usernameInput = document.querySelector("#username");
-// const titleInput = document.querySelector("#title");
-// const contentInput = document.querySelector("#content");
+const form = document.getElementById('blog-form');
 
-// // Handle form submission to save blog post data
-// document
-//   .querySelector(".blog-form")
-//   .addEventListener("submit", function (event) {
-//     // prevent page refresh from occurring
-//     event.preventDefault();
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
 
-//     const formData = {
-//       username: usernameInput.value,
-//       title: titleInput.value,
-//       content: contentInput.value,
-//     };
+    const usernameInput = document.querySelector("#username");
+    const titleInput = document.querySelector("#title");
+    const contentInput = document.querySelector("#content");
 
-//     // Retrieve existing blog posts from localStorage
-//     let storedData = JSON.parse(localStorage.getItem("formData"));
-//     if (!storedData) {
-//       storedData = [];
-//     }
+    const formData = {
+        username: usernameInput.value,
+        title: titleInput.value,
+        content: contentInput.value,
+    };
 
-//     // Add new blog post to storedData array
-//     storedData.push(formData);
+    // Safely retrieve or initialize storedData as an array
+  // Safely retrieve or initialize storedData as an array
+let storedData = [];
+if (localStorage.getItem("formData")) {
+    const retrievedData = localStorage.getItem("formData");
+    // Check if retrievedData is valid JSON and an array before parsing
+    if (retrievedData && retrievedData.startsWith('[') && retrievedData.endsWith(']')) {
+        storedData = JSON.parse(retrievedData);
+    }
+}
 
-//     // Save updated storedData array back to localStorage
-//     localStorage.setItem("formData", JSON.stringify(storedData));
-// });
+
+    storedData.push(formData);
+    localStorage.setItem("formData", JSON.stringify(storedData));
+    console.log("Stored Data:", storedData);
+
+    // Clear form fields after submission
+    usernameInput.value = '';
+    titleInput.value = '';
+    contentInput.value = '';
+
+    window.location.href = "blog.html"; 
+});
